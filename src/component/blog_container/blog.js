@@ -4,10 +4,11 @@ const Blog = (props) => {
 
 
   return(
-    <div>
-      <h2>{props.title}</h2>
-      <h4>{props.summary}</h4>
-    </div>
+    <>
+    {console.log(props)}
+      {/* <h2>{props.title}</h2>
+      <h4>{props.summary}</h4> */}
+    </>
   )
 }
 
