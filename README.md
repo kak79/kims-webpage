@@ -20,7 +20,7 @@ rails db:seed<br><br>
 <br><br>
 To access and use the Rails API, type the following in the terminal that you have open at the 'backend' folder:<br>
 
-rails s -p 3001<br>
+rails s<br>
 
 Navigate to the 'frontend' folder and run: <br>
 
