@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Blogs from "./blog";
+import Blogs from "./blogs";
 import NewBlog from './newBlog';
 import {
   Route, Switch

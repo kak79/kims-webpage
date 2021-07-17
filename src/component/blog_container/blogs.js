@@ -1,6 +1,6 @@
 import React from "react";
 
-const Blog = (props) => {
+const Blogs = (props) => {
 
 
   return(
@@ -12,4 +12,4 @@ const Blog = (props) => {
   )
 }
 
-export default Blog;
+export default Blogs;
