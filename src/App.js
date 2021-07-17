@@ -23,11 +23,15 @@ function App() {
   
     <main>
       <NavBar />
-      <Route exact path="/" exact component={Home} />
+      <Route exact path="/" >
+        <Home />
+      </Route>
       <Switch>
-        <Route path="/About" exact component={About} />
+        <Route path="/about" >
+          <About />
+        </Route>
         <Route path="/blogs" component={(routeInfo) => <BlogContainer routeData={routeInfo} />} />
-        {/* <Route path="/Portfolio" exact component={Portfolio} /> */}
+        {/* <Route path="/portfolios" component={(routeInfo) => <PortfolioContainer routeData={routeInfo} />} /> */}
         {/* <Route render={() => <h1>404: page not found</h1>} />  */}
       </Switch>
     </main>
