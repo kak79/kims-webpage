@@ -8,7 +8,7 @@ import {
 class BlogContainer extends Component {
 
   state = {
-    fetchBlogs: []
+    blogs: []
   }
 
   componentDidMount() {
