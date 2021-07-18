@@ -17,6 +17,7 @@ class BlogContainer extends Component {
       .then(r => r.json())
       .then((blogsArray) => {
         this.setState({blogs: blogsArray})
+        debugger
       })
   }
 

@@ -2,12 +2,18 @@ import React from "react";
 
 const Blogs = (props) => {
 
+  debugger
 
   return(
     <>
-    {console.log(props)}
-      {/* <h2>{props.title}</h2>
-      <h4>{props.summary}</h4> */}
+      {props.blogs.map((blog) => {
+        return (
+          <>
+            <h2>{blog.title}</h2>
+            <h4>{blog.summary}</h4>
+          </>
+        )
+      })}
     </>
   )
 }
