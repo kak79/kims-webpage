@@ -1,9 +1,6 @@
 import React from "react";
 
 const Blogs = (props) => {
-
-  debugger
-
   return(
     <>
       {props.blogs.map((blog) => {
