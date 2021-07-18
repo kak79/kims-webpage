@@ -25,7 +25,6 @@ class BlogContainer extends Component {
       return {blogs: [...prevState.blogs, arg]}
     })
   }
-  
 
   render () {
     return (
