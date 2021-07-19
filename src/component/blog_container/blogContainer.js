@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { fetchBlogs } from '../../redux/actions/fetchBlogs' 
 import Blogs from "./blogs";
 import NewBlog from './newBlog';
 import {
@@ -7,32 +9,19 @@ import {
 
 class BlogContainer extends Component {
 
-  state = {
-    blogs: []
-  }
-
   componentDidMount() {
-    
-      fetch('http://127.0.0.1:3001/blogs')
-      .then(r => r.json())
-      .then((blogsArray) => {
-        this.setState({blogs: blogsArray})
-      })
-  }
-
-  updateState = (arg) => {
-    this.setState((prevState, prevProps) => {
-      return {blogs: [...prevState.blogs, arg]}
-    })
+    console.log('A')
+    this.props.fetchBlogs()
+    console.log('C')
   }
 
   render () {
     return (
       <>
         <Switch>
-          <Route exact path="/blogs/new" render={(routerProps) => <NewBlog sendData={this.updateState} {...routerProps} />} />
+          <Route exact path="/blogs/new" render={(routerProps) => <NewBlog sendData={this.componentDidMount} {...routerProps} />} />
           <Route exact path="/blogs">
-              <Blogs blogs={this.state.blogs} />
+              <Blogs blogs={this.props.blogs} />
           </Route> 
         </Switch>
       </>
@@ -41,4 +30,6 @@ class BlogContainer extends Component {
 
 }
 
-export { BlogContainer };
+export default connect((state) => {
+  return {blogs: state.blogs}
+}, {fetchBlogs})(BlogContainer);
