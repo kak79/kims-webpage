@@ -10,9 +10,7 @@ import {
 class BlogContainer extends Component {
 
   componentDidMount() {
-    console.log('A')
     this.props.fetchBlogs()
-    console.log('C')
   }
 
   render () {
