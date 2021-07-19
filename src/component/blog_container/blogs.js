@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from 'react-redux'
+import { fetchBlogs } from '../../redux/actions/fetchBlogs' 
 
 const Blogs = (props) => {
   return(
@@ -15,4 +17,17 @@ const Blogs = (props) => {
   )
 }
 
-export default Blogs;
+
+const mapStateToProps = (state) => {
+  return {
+      blogs: state.blogs
+  };
+};
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//       fetchBlogs: dispatch.fetchBlogs
+//   };
+// };
+
+export default connect(mapStateToProps, {fetchBlogs})(Blogs);
