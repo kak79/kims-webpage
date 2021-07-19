@@ -1,7 +1,7 @@
 import { NavBar } from './component/nav';
 import Home from './component/home';
 import About from './component/about';
-import { BlogContainer } from './component/blog_container/blogContainer';
+import BlogContainer from './component/blog_container/blogContainer';
 import { Switch, 
   Route, 
   // Link, 
