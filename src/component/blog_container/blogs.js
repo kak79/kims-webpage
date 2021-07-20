@@ -3,8 +3,10 @@ import { connect } from 'react-redux'
 import { fetchBlogs } from '../../redux/actions/fetchBlogs' 
 
 const Blogs = (props) => {
+  
   return(
     <>
+    
       {props.blogs.map((blog) => {
         return (
           <div key={blog.id}>
@@ -19,7 +21,7 @@ const Blogs = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-      blogs: state.blogs
+      blogs: state.blogs.reverse()
   };
 };
 

@@ -1,4 +1,5 @@
 import { NavBar } from './component/nav';
+import Latest from './component/latest';
 import Home from './component/home';
 import About from './component/about';
 import BlogContainer from './component/blog_container/blogContainer';
@@ -27,6 +28,9 @@ function App() {
         <Home />
       </Route>
       <Switch>
+        <Route path="/latest">
+          <Latest />
+        </Route>
         <Route path="/about" >
           <About />
         </Route>

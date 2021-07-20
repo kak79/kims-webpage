@@ -5,6 +5,9 @@ export default function blogs(state=[], action) {
   
     case 'NEW_BLOG':
       return [...state, action.payload];
+
+    case 'LAST_BLOG':
+      return action.payload;
   
     default:
       return state;  
